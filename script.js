@@ -10,6 +10,7 @@ function hiddenNumber(num) {
     }
 
     if (number === null) {
+      alert('Игра окончена')
       return
     }
 
@@ -25,6 +26,7 @@ function hiddenNumber(num) {
       conditions();
     } else if (number == num) {
       alert('Поздравляю, Вы угадали!!!')
+      return
     }
   }
   return conditions;
