@@ -1,7 +1,7 @@
 'use strict'
 
 function hiddenNumber(num) {
-  let number = +prompt('Угадай число от 1 до 100');
+  let number = prompt('Угадай число от 1 до 100');
 
   return function conditions() {
     if (number === null || number === 0) {
@@ -10,16 +10,16 @@ function hiddenNumber(num) {
     }
 
     if (isNaN(number) || number === '') {
-      number = +prompt('Введи число!');
+      number = prompt('Введи число!');
       conditions();
       return;
     }
 
     if (number > num) {
-      number = +prompt('Загаданное число меньше');
+      number = prompt('Загаданное число меньше');
       conditions();
     } else if (number < num) {
-      number = +prompt("Загаданное число больше");
+      number = prompt("Загаданное число больше");
       conditions();
     } else if (number == num) {
       alert('Поздравляю, Вы угадали!!!');
